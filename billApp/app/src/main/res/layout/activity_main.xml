@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imgStore"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_baseline_store_24"
+        app:layout_constraintBottom_toBottomOf="@+id/inputGia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputGia"
+        app:layout_constraintVertical_bias="0.631" />
+
+    <EditText
+        android:id="@+id/inputGia"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:hint="Nhap Gia "
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvQuetions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvQuetions"
+        app:srcCompat="@drawable/ic_service" />
+
+    <TextView
+        android:id="@+id/tvQuetions"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Dich Vu The Nao ?"
+        app:layout_constraintStart_toStartOf="@+id/inputGia"
+        app:layout_constraintTop_toBottomOf="@+id/inputGia" />
+
+    <RadioGroup
+        android:id="@+id/radioGruop"
+        android:layout_width="129dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuetions">
+
+        <RadioButton
+            android:id="@+id/Options1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Okay (10%)"
+            app:layout_constraintStart_toStartOf="@+id/radioGruop"
+            app:layout_constraintTop_toBottomOf="@+id/Options2" />
+
+        <RadioButton
+            android:id="@+id/Options2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good (15%)"
+            app:layout_constraintStart_toStartOf="@+id/radioGruop"
+            app:layout_constraintTop_toBottomOf="@+id/Options3" />
+
+        <RadioButton
+            android:id="@+id/Options3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amazing (20%)"
+            app:layout_constraintStart_toStartOf="@+id/radioGruop"
+            app:layout_constraintTop_toTopOf="@+id/radioGruop" />
+
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/round_up_swich"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/round_up_swich"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_round_up" />
+
+    <Switch
+        android:id="@+id/round_up_swich"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:checked="true"
+        android:text="Round up tip ? "
+        app:layout_constraintStart_toStartOf="@+id/radioGruop"
+        app:layout_constraintTop_toBottomOf="@+id/radioGruop" />
+
+    <Button
+        android:id="@+id/btnTinhToan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tinh toan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round_up_swich" />
+
+    <TextView
+        android:id="@+id/tipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:text="Tip Amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTinhToan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
